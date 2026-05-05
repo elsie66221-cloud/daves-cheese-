@@ -9,12 +9,62 @@
 
 <body>
 
-  <div class="page active" id="page-home"></div>
-  <div class="page" id="page-search"></div>
-  <div class="page" id="page-product"></div>
-  <div class="page" id="page-cart"></div>
-  <div class="page" id="page-payment"></div>
-  <div class="page" id="page-confirm"></div>
+  <div class="page active" id="page-home">
+    <nav class="topnav topnav-mobile"></nav>
+    <div class="home-mobile">
+        <section class="hero-mobile"></section>
+        <section class="featured-section">
+            <div id="featured-grid-mobile"></div>
+        </section>
+        <section class="categories-section">
+            <div id="category-grid-mobile"></div>
+        </section>
+        <footer></footer>
+    </div>
+    <div class="home-desktop"></div>
+  </div>
+  <div class="page" id="page-search">
+    <nav></nav>
+    <div class="search-page-body">
+
+    <!-- 侧边栏 -->
+    <aside id="search-sidebar"></aside>
+
+    <!-- 主内容 -->
+    <div class="search-main">
+
+      <!-- 分类筛选（后面JS填） -->
+      <div id="category-filters"></div>
+
+      <!-- 商品列表 -->
+      <div id="search-results-grid"></div>
+
+      <!-- 分页 -->
+      <div id="pagination"></div>
+    </div>
+  </div>
+  <div class="page" id="page-product">
+    <nav></nav>
+
+    <div id="product-page-body"></div>
+  
+  </div>
+  <div class="page" id="page-cart">
+    <nav></nav>
+
+    <div id="cart-page-body"></div>
+  
+  </div>
+  <div class="page" id="page-payment">
+    <nav></nav>
+
+    <div id="payment-page-body"></div>
+  </div>
+  <div class="page" id="page-confirm">
+    <nav></nav>
+    
+    <div id="confirm-page-body"></div>
+  </div>
 
   <script src="js/app.js"></script>
 
