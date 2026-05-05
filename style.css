@@ -1,2 +1,31 @@
 .page { display: none; }
 .page.active { display: block; }
+:root {
+    --cream: #fffff5;
+    --dark: #1a1a1a;
+    --dark-warm: #201b16;
+    --text-body: #494738;
+    --text-muted: #666666;
+    --brand-orange: #9f3c00;
+    --brand-yellow: #ffd900;
+    --accent-orange: #e87512;
+    --accent-green: #1d6961;
+    --border: #e6e6e6;
+    --footer-bg: #201b16;
+    --nav-height: 56px;
+  }
+
+  /* ===== reset ===== */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+/* ===== body ===== */
+body {
+    font-family: 'Inter', sans-serif;
+    background: var(--cream);
+    color: var(--text-body);
+  }
