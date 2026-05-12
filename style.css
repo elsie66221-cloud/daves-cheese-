@@ -1,5 +1,6 @@
 .page { display: none; }
 .page.active { display: block; }
+/* ===== CSS VARIABLES ===== */
 :root {
     --cream: #fffff5;
     --dark: #1a1a1a;
@@ -11,21 +12,44 @@
     --accent-orange: #e87512;
     --accent-green: #1d6961;
     --border: #e6e6e6;
+    --border-warm: #e1c0b3;
+    --bg-search: #f2e6de;
+    --white: #ffffff;
     --footer-bg: #201b16;
+    --footer-text: #fff8f5;
+    --tag-color: #767200;
     --nav-height: 56px;
   }
+  
 
-  /* ===== reset ===== */
-*,
-*::before,
-*::after {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-}
-/* ===== body ===== */
-body {
-    font-family: 'Inter', sans-serif;
-    background: var(--cream);
-    color: var(--text-body);
+ /* ===== RESET ===== */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+body { font-family: 'Inter', sans-serif; background: var(--cream); color: var(--dark); }
+a { text-decoration: none; color: inherit; }
+button { cursor: pointer; border: none; background: none; font-family: inherit; }
+img { max-width: 100%; display: block; }
+input { font-family: inherit; }
+
+/* ===== PRODUCT CARD ===== */
+.product-card {
+    background: var(--white); border-radius: 8px;
+    border: 1px solid var(--border); overflow: hidden;
+    cursor: pointer; transition: box-shadow .2s;
   }
+  .product-card:hover { box-shadow: 0 4px 16px rgba(0,0,0,0.1); }
+  .product-card-img { width: 100%; aspect-ratio: 1; object-fit: cover; background: #f0e8e0; }
+  .product-card-info { padding: 10px 12px 12px; }
+  .product-tag { font-size: 10px; font-weight: 600; letter-spacing: 1px; color: var(--tag-color); margin-bottom: 4px; }
+  .product-name { font-size: 13px; font-weight: 500; color: var(--dark); margin-bottom: 4px; }
+  .product-price { font-size: 15px; font-weight: 700; color: var(--text-body); margin-bottom: 8px; }
+  .btn-add-cart {
+    display: flex; align-items: center; justify-content: center; gap: 6px;
+    background: var(--dark-warm); color: #fff;
+    font-size: 12px; font-weight: 600; letter-spacing: .03em;
+    padding: 9px 10px; border-radius: 10px; width: 100%;
+    transition: background .2s, transform .1s;
+  }
+  .btn-add-cart:hover { background: #3a2e26; transform: translateY(-1px); }
+  .btn-add-cart:active { transform: translateY(0); }
+  .btn-add-cart svg { flex-shrink: 0; }
