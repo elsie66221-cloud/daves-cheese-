@@ -482,6 +482,63 @@ function navigateTo(page) {
     updateAllBadges();
   }
 
+   // ===== CART HELPERS =====
+   function formatPrice(n) { return '$' + n.toFixed(2); }
+   function getShipping() {
+     if (selectedDelivery === 'express') return 19.95;
+     return getCartTotal() >= 50 ? 0 : 9.95;
+   }
+   function shippingNudge() {
+     if (selectedDelivery === 'express') return '';
+     var subtotal = getCartTotal();
+     if (subtotal >= 50) return '';
+     var remaining = (50 - subtotal).toFixed(2);
+     return '<p class="shipping-nudge">Spend $' + remaining + ' more to qualify for free standard shipping.</p>';
+   }
+   function getCartTotal() {
+     return Object.keys(cart).reduce(function(s, id) {
+       var p = PRODUCTS.find(function(m) { return m.id === id; });
+       return p ? s + p.price * cart[id] : s;
+     }, 0);
+   }
+   function getCartCount() {
+     return Object.values(cart).reduce(function(s, q) { return s + q; }, 0);
+   }
+   function addToCart(id) {
+     cart[id] = (cart[id] || 0) + 1;
+     updateAllBadges();
+     updateCardControls(id);
+   }
+   function removeFromCart(id) {
+     if (!cart[id]) return;
+     if (cart[id] > 1) cart[id]--;
+     else delete cart[id];
+     updateAllBadges();
+     updateCardControls(id);
+   }
+   function updateAllBadges() {
+     var count = getCartCount();
+     var badges = $$('.cart-badge');
+     badges.forEach(function(b) {
+       b.textContent = count;
+       b.style.display = count > 0 ? 'flex' : 'none';
+     });
+   }
+   function updateCardControls(id) {
+     var qty = cart[id] || 0;
+     $$('[data-card-id="' + id + '"]').forEach(function(card) {
+       var addBtn = card.querySelector('.btn-add-cart');
+       var ctrl = card.querySelector('.card-qty-ctrl');
+       if (addBtn) addBtn.style.display = qty > 0 ? 'none' : 'flex';
+       if (ctrl) {
+         ctrl.style.display = qty > 0 ? 'flex' : 'none';
+         var num = ctrl.querySelector('.card-qty-num');
+         if (num) num.textContent = qty;
+       }
+     });
+   }
+ 
+
    // ===== RENDER PRODUCT CARD =====
    function renderProductCard(p) {
     var qty = cart[p.id] || 0;
@@ -534,16 +591,16 @@ function navigateTo(page) {
  
 
 
-function updateAllBadges() {
-  var count = getCartCount();
-  var badges = $$('.cart-badge');
-  badges.forEach(function(b) {
-    b.textContent = count;
-    b.style.display = count > 0 ? 'flex' : 'none';
-  });
-}
+ 
+  function isLimited(p) {
+    var t = (p.tag || '').toUpperCase();
+    return t.indexOf('PREMIUM') >= 0 || t.indexOf('HERITAGE') >= 0 || t.indexOf('AGED') >= 0 || t.indexOf('RESERVE') >= 0;
+  }
 
-function renderSearchSidebar() {
+  function priceMaxLabel() { return priceMax >= PRICE_MAX ? '$' + PRICE_MAX + '+' : '$' + priceMax; }
+
+
+  function renderSearchSidebar() {
   var sb = $('search-sidebar');
   if (!sb) return;
   var cats = CATEGORIES.filter(function(c) { return c !== 'All'; });
@@ -576,6 +633,19 @@ function renderSearchSidebar() {
   html += '</div>';
   sb.innerHTML = html;
   updatePriceFill();
+
+  function updatePriceFill() {
+    var fill = $('price-range-fill');
+    if (!fill) return;
+    var range = PRICE_MAX - PRICE_MIN;
+    var l = ((priceMin - PRICE_MIN) / range) * 100;
+    var r = ((priceMax - PRICE_MIN) / range) * 100;
+    fill.style.left = l + '%';
+    fill.style.right = (100 - r) + '%';
+    var labMin = $('price-label-min'); if (labMin) labMin.textContent = '$' + priceMin;
+    var labMax = $('price-label-max'); if (labMax) labMax.textContent = priceMaxLabel();
+  }
+
 }
 
 
