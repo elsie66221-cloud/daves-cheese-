@@ -295,6 +295,13 @@ input { font-family: inherit; }
   border-radius: 1px;
 }
 
+.qty-pill { display: inline-flex; align-items: center; background: #f5f0eb; border-radius: 999px; padding: 3px; gap: 0; border: 1px solid #e8ddd4; }
+.qty-pill .cart-qty-btn { width: 30px; height: 30px; border-radius: 50%; }
+.qty-pill .cart-qty-num { min-width: 32px; text-align: center; font-size: 14px; font-weight: 700; color: var(--dark); }
+.card-qty-ctrl.qty-pill { width: 100%; justify-content: space-between; margin-top: 8px; }
+.card-qty-num { font-size: 14px; font-weight: 700; min-width: 24px; text-align: center; color: var(--dark); }
+.cart-qty-btn { width: 28px; height: 28px; border-radius: 50%; border: none; background: var(--dark-warm); color: #fff; font-size: 16px; display: flex; align-items: center; justify-content: center; transition: background .15s, transform .1s; flex-shrink: 0; }
+.cart-qty-btn:hover { background: #3a2e26; transform: scale(1.08); }
 
  /* ===== DESKTOP OVERRIDES ===== */
 @media (min-width: 769px) {

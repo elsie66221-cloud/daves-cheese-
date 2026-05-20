@@ -729,6 +729,24 @@ function renderSearchResults() {
   '</div>';
 }
 
+function renderStars(rating) {
+  var full = Math.floor(rating || 0);
+  var html = '';
+  for (var i = 0; i < 5; i++) {
+    html += '<svg width="14" height="14" viewBox="0 0 24 24" fill="' + (i < full ? '#956e00' : '#e1c0b3') + '"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>';
+  }
+  return html;
+}
+
+function getReviewsCount(p) {
+  return p.reviews ? p.reviews.length : 0;
+}
+
+function getReviewsAvg(p) {
+  if (!p.reviews || p.reviews.length === 0) return 0;
+  return p.reviews.reduce(function(s, r) { return s + (r.rating || 0); }, 0) / p.reviews.length;
+}
+
 function renderActionRow(p) {
   var qty = cart[p.id] || 0;
   if (qty > 0) {
@@ -843,6 +861,57 @@ function renderProduct(id) {
         '<div class="related-grid">' + related.map(renderProductCard).join('') + '</div>' +
       '</div>' +
     '</div>';
+}
+
+// ===== RENDER CART =====
+function renderCart() {
+  var body = $('cart-page-body');
+  if (!body) return;
+  var keys = Object.keys(cart);
+  if (keys.length === 0) {
+    body.innerHTML = '<div class="cart-empty"><h2 class="cart-empty-title">Your cart is empty</h2><p class="cart-empty-sub">Add some delicious cheese to get started!</p><button class="btn-primary" data-nav="search">Browse Products</button></div>';
+    return;
+  }
+  var itemsHtml = keys.map(function(id) {
+    var p = PRODUCTS.find(function(x) { return x.id === id; });
+    if (!p) return '';
+    var qty = cart[id];
+    return '<div class="cart-item">' +
+      '<img class="cart-item-img" src="' + p.img + '" alt="' + p.name + '" onerror="this.style.background=\'#d4c4b0\';this.src=\'\';">' +
+      '<div class="cart-item-info">' +
+        '<p class="cart-item-name">' + p.name + '</p>' +
+        '<p class="cart-item-price">' + formatPrice(p.price) + '</p>' +
+        '<div class="cart-item-controls">' +
+          '<div class="qty-pill">' +
+            '<button class="cart-qty-btn" data-cart-remove="' + id + '">−</button>' +
+            '<span class="cart-qty-num">' + qty + '</span>' +
+            '<button class="cart-qty-btn" data-cart-add="' + id + '">+</button>' +
+          '</div>' +
+          '<span class="cart-item-remove" data-cart-delete="' + id + '">Remove</span>' +
+        '</div>' +
+      '</div>' +
+    '</div>';
+  }).join('');
+  var subtotal = getCartTotal();
+  var shipping = getShipping();
+  var total = subtotal + shipping;
+  var summaryHtml = '<div class="order-summary-box">' +
+    '<h3 class="order-summary-title">Order Summary</h3>' +
+    '<div class="summary-row"><span>Subtotal</span><span>' + formatPrice(subtotal) + '</span></div>' +
+    '<div class="summary-row"><span>Shipping</span><span>' + (shipping === 0 ? 'FREE' : formatPrice(shipping)) + '</span></div>' +
+    '<div class="summary-row total"><span>Total</span><span>' + formatPrice(total) + '</span></div>' +
+    shippingNudge() +
+  '</div>' +
+  '<div class="coupon-row"><input class="coupon-input" placeholder="Coupon code"><button class="btn-coupon">Apply</button></div>' +
+  '<button class="btn-checkout" data-nav="payment">Proceed to Checkout</button>' +
+  '<button class="btn-continue" data-nav="search">Continue Shopping</button>';
+  body.innerHTML =
+    '<div class="cart-main">' +
+      '<div class="cart-breadcrumb"><a data-nav="home" href="#">Home</a> › Shopping Cart</div>' +
+      '<div class="cart-hero"><h2 class="cart-hero-title">Shopping Cart</h2><p class="cart-hero-sub">' + keys.length + ' item' + (keys.length !== 1 ? 's' : '') + ' in your cart</p></div>' +
+      '<div class="cart-items-list">' + itemsHtml + '</div>' +
+    '</div>' +
+    '<div class="cart-sidebar">' + summaryHtml + '</div>';
 }
 
 
