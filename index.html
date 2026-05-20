@@ -13,23 +13,25 @@
 
 <!-- ===== PAGE: HOME ===== -->
 <div class="page active" id="page-home">
-    <!-- MOBILE NAV -->
-    <nav class="topnav topnav-mobile">
-        <button class="nav-menu-btn" id="mobile-menu-btn" aria-label="Menu">
-            <span></span><span></span><span></span>
-          </button>
-          <span class="nav-logo">Daves Cheese</span>
-          <div class="nav-icons">
-            <button class="nav-icon-btn" data-nav="search" aria-label="Search">
-              <svg width="24" height="24" viewBox="0 0 24 24" fill="none"><circle cx="11" cy="11" r="7" stroke="#262626" stroke-width="2"/><path d="M20 20l-3-3" stroke="#262626" stroke-width="2" stroke-linecap="round"/></svg>
-            </button>
-            <button class="nav-icon-btn cart-btn" data-nav="cart" aria-label="Cart">
-              <svg width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z" stroke="#262626" stroke-width="2" stroke-linejoin="round"/><line x1="3" y1="6" x2="21" y2="6" stroke="#262626" stroke-width="2"/><path d="M16 10a4 4 0 01-8 0" stroke="#262626" stroke-width="2"/></svg>
-              <span class="cart-badge" id="cart-badge-nav" style="display:none">0</span>
-            </button>
-          </div>
-    </nav>
-    <!-- DESKTOP NAV -->
+
+  <!-- MOBILE NAV -->
+  <nav class="topnav topnav-mobile">
+    <button class="nav-menu-btn" id="mobile-menu-btn" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+    <span class="nav-logo">Daves Cheese</span>
+    <div class="nav-icons">
+      <button class="nav-icon-btn" data-nav="search" aria-label="Search">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none"><circle cx="11" cy="11" r="7" stroke="#262626" stroke-width="2"/><path d="M20 20l-3-3" stroke="#262626" stroke-width="2" stroke-linecap="round"/></svg>
+      </button>
+      <button class="nav-icon-btn cart-btn" data-nav="cart" aria-label="Cart">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z" stroke="#262626" stroke-width="2" stroke-linejoin="round"/><line x1="3" y1="6" x2="21" y2="6" stroke="#262626" stroke-width="2"/><path d="M16 10a4 4 0 01-8 0" stroke="#262626" stroke-width="2"/></svg>
+        <span class="cart-badge" id="cart-badge-nav" style="display:none">0</span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- DESKTOP NAV -->
   <nav class="topnav topnav-desktop">
     <div class="nav-inner">
       <a class="nav-logo" href="#home">Daves Cheese</a>
@@ -50,153 +52,217 @@
       </div>
     </div>
   </nav>
-    <!-- MOBILE HOME CONTENT -->
-    <div class="home-mobile">
-        <section class="hero-mobile">
-            <div class="hero-img-wrap">
-                <img src="assets/images/hero-bg.jpg" alt="Fresh cheese" class="hero-img" onerror="this.style.background='#c8b8a2';this.removeAttribute('src')">
-                <div class="hero-gradient"></div>
-              </div>
-              <div class="hero-text">
-                <p class="hero-since">SINCE 1924</p>
-                <h1 class="hero-title">Fresh Dairy<br><em class="hero-title-em">Excellence</em></h1>
-                <p class="hero-desc">Farm Fresh, Cheese Perfected. Discover our collection of award-winning artisanal cheeses, crafted with passion and local heritage.</p>
-                <div class="hero-btns">
-                  <button class="btn-primary" data-nav="search">Shop Now</button>
-                  <button class="btn-secondary">Our Process</button>
-                </div>
-              </div>
-        </section>
-        <section class="featured-section">
-            <div id="featured-grid-mobile"></div>
-        </section>
-        <section class="categories-section">
-            <div id="category-grid-mobile"></div>
-        </section>
-        <footer></footer>
-    </div>
-   
-    <div class="home-desktop">
-        <section class="hero-desktop">
-            <div class="hero-desktop-img">
-              <img src="assets/images/hero-bg.jpg" alt="Fresh cheese" onerror="this.style.background='#c8b8a2';this.removeAttribute('src')">
-              <div class="hero-desktop-overlay"></div>
-            </div>
-            <div class="hero-desktop-content">
-              <p class="hero-since">SINCE 1924</p>
-              <h1 class="hero-desktop-title">Fresh Dairy<br><em class="hero-title-em">Excellence</em></h1>
-              <p class="hero-desktop-desc">Farm Fresh, Cheese Perfected. Discover our collection of award-winning artisanal cheeses, crafted with passion and local heritage.</p>
-              <div class="hero-btns">
-                <button class="btn-primary" data-nav="search">Shop Now</button>
-                <button class="btn-secondary">Our Process</button>
-              </div>
-            </div>
-          </section>
-      
-          <div class="desktop-main">
-            <section class="featured-section-desktop">
-              <div class="section-header">
-                <div>
-                  <h2 class="section-title-desktop">Featured Selections</h2>
-                  <div class="title-bar-yellow"></div>
-                  <p class="section-sub-desktop">Hand-picked seasonal favorites from our aging cellar.</p>
-                </div>
-                <a href="#" class="view-all-desktop" data-nav="search">View All →</a>
-              </div>
-              <div class="product-grid-4col" id="featured-grid-desktop"></div>
-            </section>
-      
-            <section class="categories-section-desktop">
-              <div class="section-header-line">
-                <h2 class="section-title-desktop">Shop by Categories</h2>
-                <div class="title-bar-yellow"></div>
-              </div>
-              <div class="category-grid-desktop" id="category-grid-desktop"></div>
-            </section>
-      
-            <section class="promises-desktop">
-              <div class="promise-card promise-orange">
-                <div class="promise-icon-wrap" style="background:#e8590d">
-                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" fill="#fff"/></svg>
-                </div>
-                <div>
-                  <h3 class="promise-title">Fresh Selection</h3>
-                  <p class="promise-desc">Our master cheesemakers curate only the finest batches, ensuring every slice meets our rigorous quality standards.</p>
-                </div>
-              </div>
-              <div class="promise-card promise-green">
-                <div class="promise-icon-wrap" style="background:#17a34a">
-                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M5 12h14M12 5l7 7-7 7" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
-                </div>
-                <div>
-                  <h3 class="promise-title">Fast Delivery</h3>
-                  <p class="promise-desc">Temperature-controlled shipping that brings farm-fresh excellence to your doorstep within 24 hours.</p>
-                </div>
-              </div>
-            </section>
-      
-            <section class="about-section-desktop">
-              <div class="section-header-line">
-                <h2 class="section-title-desktop">About us</h2>
-                <div class="title-bar-yellow"></div>
-              </div>
-              <div class="about-desktop-body">
-                <div class="about-images-stacked">
-                  <div class="about-img-back"><img src="assets/images/about-chicken.png" alt="Chicken" onerror="this.parentElement.style.background='#c8a882'"></div>
-                  <div class="about-img-front"><img src="assets/images/about-bread.png" alt="Bread" onerror="this.parentElement.style.background='#d4c4b0'"></div>
-                </div>
-                <div class="about-text-col">
-                  <p class="about-text">At Daves Cheese, we source only the highest quality cheeses and dairy products. With over 15 years of experience in the Australian dairy wholesale market, we deliver premium products to restaurants, retailers, and foodservice professionals across the country.</p>
-                  <a href="#" class="read-more">READ MORE →</a>
-                </div>
-              </div>
-            </section>
-          </div>
-      
-          <footer class="site-footer footer-desktop-wrap">
-            <div class="footer-inner footer-desktop footer-4col">
-              <div class="footer-col footer-col-brand">
-                <p class="footer-logo">Daves Cheese</p>
-                <p class="footer-tagline">Australia's trusted cheese wholesaler delivering fresh, premium cheese to your door.</p>
-                <div class="footer-socials">
-                  <a href="#" class="footer-social-link" aria-label="Facebook"><img src="assets/images/Facebook_Logo_Primary.png" alt="Facebook" class="footer-social-img"></a>
-                  <a href="#" class="footer-social-link" aria-label="Instagram"><img src="assets/images/Instagram_Glyph_Gradient.png" alt="Instagram" class="footer-social-img"></a>
-                  <a href="#" class="footer-social-link footer-social-x" aria-label="X"><img src="assets/images/logo-white.png" alt="X" class="footer-social-img"></a>
-                </div>
-              </div>
-              <div class="footer-col">
-                <p class="footer-contact-title">Information</p>
-                <p><a href="#" data-nav="home">Home</a></p>
-                <p><a href="#" data-nav="search">Shop</a></p>
-                <p><a href="#">About Us</a></p>
-                <p><a href="#">Contact</a></p>
-                <p><a href="#">Privacy Policy</a></p>
-              </div>
-              <div class="footer-col">
-                <p class="footer-contact-title">Top Categories</p>
-                <p><a href="#" data-cat-nav="Cheese">Cheese</a></p>
-                <p><a href="#" data-cat-nav="Cream">Cream</a></p>
-                <p><a href="#" data-cat-nav="Milk &amp; Yogurt">Milk &amp; Yogurt</a></p>
-                <p><a href="#" data-cat-nav="Flour &amp; Yeast">Flour &amp; Yeast</a></p>
-                <p><a href="#" data-cat-nav="Small Goods">Small Goods</a></p>
-              </div>
-              <div class="footer-col">
-                <p class="footer-contact-title">Get in Touch</p>
-                <p class="footer-contact-item"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" style="flex-shrink:0;margin-top:3px"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z" fill="currentColor"/></svg>Unit 36/66 Turner Rd, Smeaton Grange NSW 2567</p>
-                <p class="footer-contact-item"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" style="flex-shrink:0;margin-top:3px"><path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z" fill="currentColor"/></svg>info@davescheese.com</p>
-                <p class="footer-contact-item"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" style="flex-shrink:0;margin-top:3px"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z" fill="currentColor"/></svg>+61 450 892 403</p>
-              </div>
-            </div>
-            <div class="footer-bottom-desktop">
-              <span>© 2026 Daves Cheese. All rights reserved.</span>
-              <span>Privacy Policy | Cookie Policy</span>
-            </div>
-          </footer>
+
+  <!-- MOBILE HOME CONTENT -->
+  <div class="home-mobile">
+    <section class="hero-mobile">
+      <div class="hero-img-wrap">
+        <img src="assets/images/hero-bg.jpg" alt="Fresh cheese" class="hero-img" onerror="this.style.background='#c8b8a2';this.removeAttribute('src')">
+        <div class="hero-gradient"></div>
+      </div>
+      <div class="hero-text">
+        <p class="hero-since">SINCE 1924</p>
+        <h1 class="hero-title">Fresh Dairy<br><em class="hero-title-em">Excellence</em></h1>
+        <p class="hero-desc">Farm Fresh, Cheese Perfected. Discover our collection of award-winning artisanal cheeses, crafted with passion and local heritage.</p>
+        <div class="hero-btns">
+          <button class="btn-primary" data-nav="search">Shop Now</button>
+          <button class="btn-secondary">Our Process</button>
         </div>
-    
+      </div>
+    </section>
+
+    <section class="featured-section">
+      <div class="section-header">
+        <div>
+          <h2 class="section-title">Featured Selections</h2>
+          <p class="section-sub">Hand-picked seasonal favorites</p>
+        </div>
+        <a href="#" class="view-all" data-nav="search">View All <span>›</span></a>
+      </div>
+      <div class="product-grid-2col" id="featured-grid-mobile"></div>
+    </section>
+
+    <section class="categories-section">
+      <div class="section-header-line">
+        <h2 class="section-title">Shop by Categories</h2>
+        <div class="title-underline"></div>
+      </div>
+      <div class="category-grid" id="category-grid-mobile"></div>
+    </section>
+
+    <section class="promises-section">
+      <div class="promise-card promise-orange">
+        <div class="promise-icon-wrap" style="background:#e8590d">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" fill="#fff"/></svg>
+        </div>
+        <div>
+          <h3 class="promise-title">Fresh Selection</h3>
+          <p class="promise-desc">Our master cheesemakers curate only the finest batches, ensuring every slice meets our rigorous quality standards.</p>
+        </div>
+      </div>
+      <div class="promise-card promise-green">
+        <div class="promise-icon-wrap" style="background:#17a34a">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M5 12h14M12 5l7 7-7 7" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </div>
+        <div>
+          <h3 class="promise-title">Fast Delivery</h3>
+          <p class="promise-desc">Temperature-controlled shipping that brings farm-fresh excellence to your doorstep within 24 hours.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="about-section">
+      <div class="section-header-line">
+        <h2 class="section-title">About us</h2>
+        <div class="title-underline" style="background:#e87512"></div>
+      </div>
+      <div class="about-images">
+        <div class="about-img-wrap"><img src="assets/images/about-bread.png" alt="Bread" onerror="this.parentElement.style.background='#d4c4b0'"></div>
+        <div class="about-img-wrap"><img src="assets/images/about-chicken.png" alt="Chicken" onerror="this.parentElement.style.background='#c8a882'"></div>
+      </div>
+      <p class="about-text">At Daves Cheese, we source only the highest quality cheeses and dairy products. With over 15 years of experience in the Australian dairy wholesale market, we deliver premium products to restaurants, retailers, and foodservice professionals across the country.</p>
+      <a href="#" class="read-more">READ MORE →</a>
+    </section>
+
+    <footer class="site-footer">
+      <div class="footer-inner">
+        <p class="footer-logo">Daves Cheese</p>
+        <p class="footer-tagline">Australia's trusted cheese wholesaler delivering fresh, premium cheese to your door.</p>
+        <div class="footer-contact">
+          <p>Unit 36/66 Turner Rd, Smeaton Grange NSW 2567, Australia</p>
+          <p>info@davescheese.com</p>
+          <p>+61450892403</p>
+        </div>
+        <div class="footer-divider"></div>
+        <div class="footer-bottom">
+          <span>© 2026 Daves Cheese</span>
+          <span>Privacy | Cookie</span>
+        </div>
+      </div>
+    </footer>
+  </div>
+
+  <!-- DESKTOP HOME CONTENT -->
+  <div class="home-desktop">
+    <section class="hero-desktop">
+      <div class="hero-desktop-img">
+        <img src="assets/images/hero-bg.jpg" alt="Fresh cheese" onerror="this.style.background='#c8b8a2';this.removeAttribute('src')">
+        <div class="hero-desktop-overlay"></div>
+      </div>
+      <div class="hero-desktop-content">
+        <p class="hero-since">SINCE 1924</p>
+        <h1 class="hero-desktop-title">Fresh Dairy<br><em class="hero-title-em">Excellence</em></h1>
+        <p class="hero-desktop-desc">Farm Fresh, Cheese Perfected. Discover our collection of award-winning artisanal cheeses, crafted with passion and local heritage.</p>
+        <div class="hero-btns">
+          <button class="btn-primary" data-nav="search">Shop Now</button>
+          <button class="btn-secondary">Our Process</button>
+        </div>
+      </div>
+    </section>
+
+    <div class="desktop-main">
+      <section class="featured-section-desktop">
+        <div class="section-header">
+          <div>
+            <h2 class="section-title-desktop">Featured Selections</h2>
+            <div class="title-bar-yellow"></div>
+            <p class="section-sub-desktop">Hand-picked seasonal favorites from our aging cellar.</p>
+          </div>
+          <a href="#" class="view-all-desktop" data-nav="search">View All →</a>
+        </div>
+        <div class="product-grid-4col" id="featured-grid-desktop"></div>
+      </section>
+
+      <section class="categories-section-desktop">
+        <div class="section-header-line">
+          <h2 class="section-title-desktop">Shop by Categories</h2>
+          <div class="title-bar-yellow"></div>
+        </div>
+        <div class="category-grid-desktop" id="category-grid-desktop"></div>
+      </section>
+
+      <section class="promises-desktop">
+        <div class="promise-card promise-orange">
+          <div class="promise-icon-wrap" style="background:#e8590d">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" fill="#fff"/></svg>
+          </div>
+          <div>
+            <h3 class="promise-title">Fresh Selection</h3>
+            <p class="promise-desc">Our master cheesemakers curate only the finest batches, ensuring every slice meets our rigorous quality standards.</p>
+          </div>
+        </div>
+        <div class="promise-card promise-green">
+          <div class="promise-icon-wrap" style="background:#17a34a">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M5 12h14M12 5l7 7-7 7" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </div>
+          <div>
+            <h3 class="promise-title">Fast Delivery</h3>
+            <p class="promise-desc">Temperature-controlled shipping that brings farm-fresh excellence to your doorstep within 24 hours.</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="about-section-desktop">
+        <div class="section-header-line">
+          <h2 class="section-title-desktop">About us</h2>
+          <div class="title-bar-yellow"></div>
+        </div>
+        <div class="about-desktop-body">
+          <div class="about-images-stacked">
+            <div class="about-img-back"><img src="assets/images/about-chicken.png" alt="Chicken" onerror="this.parentElement.style.background='#c8a882'"></div>
+            <div class="about-img-front"><img src="assets/images/about-bread.png" alt="Bread" onerror="this.parentElement.style.background='#d4c4b0'"></div>
+          </div>
+          <div class="about-text-col">
+            <p class="about-text">At Daves Cheese, we source only the highest quality cheeses and dairy products. With over 15 years of experience in the Australian dairy wholesale market, we deliver premium products to restaurants, retailers, and foodservice professionals across the country.</p>
+            <a href="#" class="read-more">READ MORE →</a>
+          </div>
+        </div>
+      </section>
     </div>
-  
-  <!-- ===== PAGE: SEARCH ===== -->
+
+    <footer class="site-footer footer-desktop-wrap">
+      <div class="footer-inner footer-desktop footer-4col">
+        <div class="footer-col footer-col-brand">
+          <p class="footer-logo">Daves Cheese</p>
+          <p class="footer-tagline">Australia's trusted cheese wholesaler delivering fresh, premium cheese to your door.</p>
+          <div class="footer-socials">
+            <a href="#" class="footer-social-link" aria-label="Facebook"><img src="assets/images/Facebook_Logo_Primary.png" alt="Facebook" class="footer-social-img"></a>
+            <a href="#" class="footer-social-link" aria-label="Instagram"><img src="assets/images/Instagram_Glyph_Gradient.png" alt="Instagram" class="footer-social-img"></a>
+            <a href="#" class="footer-social-link footer-social-x" aria-label="X"><img src="assets/images/logo-white.png" alt="X" class="footer-social-img"></a>
+          </div>
+        </div>
+        <div class="footer-col">
+          <p class="footer-contact-title">Information</p>
+          <p><a href="#" data-nav="home">Home</a></p>
+          <p><a href="#" data-nav="search">Shop</a></p>
+          <p><a href="#">About Us</a></p>
+          <p><a href="#">Contact</a></p>
+          <p><a href="#">Privacy Policy</a></p>
+        </div>
+        <div class="footer-col">
+          <p class="footer-contact-title">Top Categories</p>
+          <p><a href="#" data-cat-nav="Cheese">Cheese</a></p>
+          <p><a href="#" data-cat-nav="Cream">Cream</a></p>
+          <p><a href="#" data-cat-nav="Milk &amp; Yogurt">Milk &amp; Yogurt</a></p>
+          <p><a href="#" data-cat-nav="Flour &amp; Yeast">Flour &amp; Yeast</a></p>
+          <p><a href="#" data-cat-nav="Small Goods">Small Goods</a></p>
+        </div>
+        <div class="footer-col">
+          <p class="footer-contact-title">Get in Touch</p>
+          <p class="footer-contact-item"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" style="flex-shrink:0;margin-top:3px"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z" fill="currentColor"/></svg>Unit 36/66 Turner Rd, Smeaton Grange NSW 2567</p>
+          <p class="footer-contact-item"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" style="flex-shrink:0;margin-top:3px"><path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z" fill="currentColor"/></svg>info@davescheese.com</p>
+          <p class="footer-contact-item"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" style="flex-shrink:0;margin-top:3px"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z" fill="currentColor"/></svg>+61 450 892 403</p>
+        </div>
+      </div>
+      <div class="footer-bottom-desktop">
+        <span>© 2026 Daves Cheese. All rights reserved.</span>
+        <span>Privacy Policy | Cookie Policy</span>
+      </div>
+    </footer>
+  </div>
+</div>
+
+<!-- ===== PAGE: SEARCH ===== -->
 <div class="page" id="page-search">
   <nav class="topnav topnav-mobile">
     <button class="nav-back-btn" data-nav="home" aria-label="Back">
@@ -300,6 +366,169 @@
     </div>
   </footer>
 </div>
+
+<!-- ===== PAGE: PRODUCT DETAIL ===== -->
+<div class="page" id="page-product">
+  <nav class="topnav topnav-mobile">
+    <button class="nav-back-btn" id="product-back-btn" aria-label="Back">
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M19 12H5M12 5l-7 7 7 7" stroke="#262626" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+    </button>
+    <span class="nav-logo">Daves Cheese</span>
+    <button class="nav-icon-btn cart-btn" data-nav="cart" aria-label="Cart">
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z" stroke="#262626" stroke-width="2" stroke-linejoin="round"/><line x1="3" y1="6" x2="21" y2="6" stroke="#262626" stroke-width="2"/><path d="M16 10a4 4 0 01-8 0" stroke="#262626" stroke-width="2"/></svg>
+      <span class="cart-badge" id="cart-badge-product" style="display:none">0</span>
+    </button>
+  </nav>
+  <nav class="topnav topnav-desktop">
+    <div class="nav-inner">
+      <a class="nav-logo" data-nav="home" href="#">Daves Cheese</a>
+      <div class="nav-links">
+        <a href="#" data-nav="home" class="nav-link">Home</a>
+        <a href="#" data-nav="search" class="nav-link active">Shop</a>
+        <a href="#" class="nav-link">About</a>
+        <a href="#" class="nav-link">Contact</a>
+      </div>
+      <div class="nav-actions">
+        <button class="nav-icon-btn cart-btn" data-nav="cart" aria-label="Cart">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z" stroke="#262626" stroke-width="2" stroke-linejoin="round"/><line x1="3" y1="6" x2="21" y2="6" stroke="#262626" stroke-width="2"/><path d="M16 10a4 4 0 01-8 0" stroke="#262626" stroke-width="2"/></svg>
+          <span class="cart-badge" id="cart-badge-product-desktop" style="display:none">0</span>
+        </button>
+      </div>
+    </div>
+  </nav>
+  <div class="product-page-body" id="product-page-body"></div>
+  <footer class="site-footer footer-mobile-only">
+    <div class="footer-inner">
+      <p class="footer-logo">Daves Cheese</p>
+      <p class="footer-tagline">Australia's trusted cheese wholesaler delivering fresh, premium cheese to your door.</p>
+      <div class="footer-contact">
+        <p>Unit 36/66 Turner Rd, Smeaton Grange NSW 2567, Australia</p>
+        <p>info@davescheese.com</p>
+        <p>+61450892403</p>
+      </div>
+      <div class="footer-divider"></div>
+      <div class="footer-bottom"><span>© 2026 Daves Cheese</span><span>Privacy | Cookie</span></div>
+    </div>
+  </footer>
+  <footer class="site-footer footer-desktop-wrap footer-desktop-only">
+    <div class="footer-inner footer-desktop footer-4col">
+      <div class="footer-col footer-col-brand">
+        <p class="footer-logo">Daves Cheese</p>
+        <p class="footer-tagline">Australia's trusted cheese wholesaler delivering fresh, premium cheese to your door.</p>
+        <div class="footer-socials">
+          <a href="#" class="footer-social-link" aria-label="Facebook"><img src="assets/images/Facebook_Logo_Primary.png" alt="Facebook" class="footer-social-img"></a>
+          <a href="#" class="footer-social-link" aria-label="Instagram"><img src="assets/images/Instagram_Glyph_Gradient.png" alt="Instagram" class="footer-social-img"></a>
+          <a href="#" class="footer-social-link footer-social-x" aria-label="X"><img src="assets/images/logo-white.png" alt="X" class="footer-social-img"></a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <p class="footer-contact-title">Information</p>
+        <p><a href="#" data-nav="home">Home</a></p>
+        <p><a href="#" data-nav="search">Shop</a></p>
+        <p><a href="#">About Us</a></p>
+        <p><a href="#">Contact</a></p>
+        <p><a href="#">Privacy Policy</a></p>
+      </div>
+      <div class="footer-col">
+        <p class="footer-contact-title">Top Categories</p>
+        <p><a href="#" data-cat-nav="Cheese">Cheese</a></p>
+        <p><a href="#" data-cat-nav="Cream">Cream</a></p>
+        <p><a href="#" data-cat-nav="Milk &amp; Yogurt">Milk &amp; Yogurt</a></p>
+        <p><a href="#" data-cat-nav="Flour &amp; Yeast">Flour &amp; Yeast</a></p>
+        <p><a href="#" data-cat-nav="Small Goods">Small Goods</a></p>
+      </div>
+      <div class="footer-col">
+        <p class="footer-contact-title">Get in Touch</p>
+        <p class="footer-contact-item"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" style="flex-shrink:0;margin-top:3px"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z" fill="currentColor"/></svg>Unit 36/66 Turner Rd, Smeaton Grange NSW 2567</p>
+        <p class="footer-contact-item"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" style="flex-shrink:0;margin-top:3px"><path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z" fill="currentColor"/></svg>info@davescheese.com</p>
+        <p class="footer-contact-item"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" style="flex-shrink:0;margin-top:3px"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z" fill="currentColor"/></svg>+61 450 892 403</p>
+      </div>
+    </div>
+    <div class="footer-bottom-desktop">
+      <span>© 2026 Daves Cheese. All rights reserved.</span>
+      <span>Privacy Policy | Cookie Policy</span>
+    </div>
+  </footer>
+</div>
+
+<!-- ===== PAGE: CART ===== -->
+<div class="page" id="page-cart">
+  <nav class="topnav topnav-mobile">
+    <button class="nav-back-btn" data-nav="search" aria-label="Back">
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M19 12H5M12 5l-7 7 7 7" stroke="#262626" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+    </button>
+    <span class="nav-logo">Daves Cheese</span>
+    <div style="width:24px"></div>
+  </nav>
+  <nav class="topnav topnav-desktop">
+    <div class="nav-inner">
+      <a class="nav-logo" data-nav="home" href="#">Daves Cheese</a>
+      <div class="nav-links">
+        <a href="#" data-nav="home" class="nav-link">Home</a>
+        <a href="#" data-nav="search" class="nav-link">Shop</a>
+        <a href="#" class="nav-link">About</a>
+        <a href="#" class="nav-link">Contact</a>
+      </div>
+      <div class="nav-actions"></div>
+    </div>
+  </nav>
+  <div class="cart-page-body" id="cart-page-body"></div>
+  <footer class="site-footer footer-mobile-only">
+    <div class="footer-inner">
+      <p class="footer-logo">Daves Cheese</p>
+      <p class="footer-tagline">Australia's trusted cheese wholesaler delivering fresh, premium cheese to your door.</p>
+      <div class="footer-contact">
+        <p>Unit 36/66 Turner Rd, Smeaton Grange NSW 2567, Australia</p>
+        <p>info@davescheese.com</p>
+        <p>+61450892403</p>
+      </div>
+      <div class="footer-divider"></div>
+      <div class="footer-bottom"><span>© 2026 Daves Cheese</span><span>Privacy | Cookie</span></div>
+    </div>
+  </footer>
+  <footer class="site-footer footer-desktop-wrap footer-desktop-only">
+    <div class="footer-inner footer-desktop footer-4col">
+      <div class="footer-col footer-col-brand">
+        <p class="footer-logo">Daves Cheese</p>
+        <p class="footer-tagline">Australia's trusted cheese wholesaler delivering fresh, premium cheese to your door.</p>
+        <div class="footer-socials">
+          <a href="#" class="footer-social-link" aria-label="Facebook"><img src="assets/images/Facebook_Logo_Primary.png" alt="Facebook" class="footer-social-img"></a>
+          <a href="#" class="footer-social-link" aria-label="Instagram"><img src="assets/images/Instagram_Glyph_Gradient.png" alt="Instagram" class="footer-social-img"></a>
+          <a href="#" class="footer-social-link footer-social-x" aria-label="X"><img src="assets/images/logo-white.png" alt="X" class="footer-social-img"></a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <p class="footer-contact-title">Information</p>
+        <p><a href="#" data-nav="home">Home</a></p>
+        <p><a href="#" data-nav="search">Shop</a></p>
+        <p><a href="#">About Us</a></p>
+        <p><a href="#">Contact</a></p>
+        <p><a href="#">Privacy Policy</a></p>
+      </div>
+      <div class="footer-col">
+        <p class="footer-contact-title">Top Categories</p>
+        <p><a href="#" data-cat-nav="Cheese">Cheese</a></p>
+        <p><a href="#" data-cat-nav="Cream">Cream</a></p>
+        <p><a href="#" data-cat-nav="Milk &amp; Yogurt">Milk &amp; Yogurt</a></p>
+        <p><a href="#" data-cat-nav="Flour &amp; Yeast">Flour &amp; Yeast</a></p>
+        <p><a href="#" data-cat-nav="Small Goods">Small Goods</a></p>
+      </div>
+      <div class="footer-col">
+        <p class="footer-contact-title">Get in Touch</p>
+        <p class="footer-contact-item"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" style="flex-shrink:0;margin-top:3px"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z" fill="currentColor"/></svg>Unit 36/66 Turner Rd, Smeaton Grange NSW 2567</p>
+        <p class="footer-contact-item"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" style="flex-shrink:0;margin-top:3px"><path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z" fill="currentColor"/></svg>info@davescheese.com</p>
+        <p class="footer-contact-item"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" style="flex-shrink:0;margin-top:3px"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z" fill="currentColor"/></svg>+61 450 892 403</p>
+      </div>
+    </div>
+    <div class="footer-bottom-desktop">
+      <span>© 2026 Daves Cheese. All rights reserved.</span>
+      <span>Privacy Policy | Cookie Policy</span>
+    </div>
+  </footer>
+</div>
+
+    
+  
 
       <!-- 分页 -->
       <div id="pagination"></div>
